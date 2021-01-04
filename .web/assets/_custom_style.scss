@@ -1,0 +1,82 @@
+.nep-list-item {
+  padding: $as-md $as-sm;
+  @extend .rounded-xs;
+  &:hover {
+    background: var(--fbg-200);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .nep-no {
+    font-weight: 500;
+    margin-right: $as-xs;
+    a {
+      color: var(--body-content);
+    }
+  }
+  .authors {
+    font-size: smaller;
+    &, & a, & a:hover {
+      color: var(--secondary);
+    }
+  }
+  h4 {
+    margin: $as-xs 0;
+    font-size: large;
+    font-weight: 600;
+    a {
+      color: var(--body-content);
+    }
+  }
+  .nep-status {
+    font-size: smaller;
+  }
+}
+
+.nep-status {
+  padding: 0 $as-xs;
+  text-transform: uppercase;
+  border: solid 1px var(--secondary);
+  @extend .rounded-xxs;
+  
+  &.draft {
+    $color: $color-orange;
+    border-color: #{$color};
+    color: #{$color};
+  }
+  &.call {
+    $color: $color-blue;
+    border-color: #{$color};
+    color: #{$color};
+  }
+  &.wip, &.replaced {
+    $color: $color-info;
+    border-color: #{$color};
+    color: #{$color};
+  }
+  &.implemented, &.active, &.final {
+    $color: $color-green;
+    border-color: #{$color};
+    color: #{$color};
+  }
+  &.abandoned, &.rejected, &.superseded, &.withdrawn {
+    $color: $color-red;
+    border-color: #{$color};
+    color: #{$color};
+  }
+}
+
+.nep-table {
+  font-size: small;
+  border-collapse: collapse;
+  th {
+    text-align: right;
+  }
+  & th, & td {
+    border: solid 1px var(--fbg-300) !important;
+    border-radius: 0 !important;
+    border-collapse: collapse;
+    padding: 0.5rem !important;
+  }
+}
