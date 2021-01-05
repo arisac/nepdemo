@@ -1,6 +1,1 @@
----
-title: Home
-type: home
----
-
-jlkjkljl
+../../_index.md
