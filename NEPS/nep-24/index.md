@@ -1,7 +1,9 @@
 ---
 NEP: 24
 Title: "Newton Pre-paid Card (NPC)"
-Authors: "[Ben Koo](mailto:koo0905@gmail.com)"
+Authors: 
+  - "[Ben Koo](mailto:koo0905@gmail.com)"
+  - "[Ben Koo](mailto:koo0905@gmail.com)"
 Discussions: https://github.com/newtonproject/NEPs/issues/24
 Status: Draft
 Categories: Technical
