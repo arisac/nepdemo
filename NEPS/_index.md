@@ -1,4 +1,7 @@
 ---
 title: NEPs
-menu: main
+menu:
+  main:
+    name: All NEPs
+    weight: 1
 ---

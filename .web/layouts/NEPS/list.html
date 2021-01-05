@@ -1,6 +1,6 @@
 {{ define "main-content" }}
   {{/* range sort .Paginator.Pages ".Params.nep" "ASC" */}}
-  Total NEPs: {{ len (where .Site.Pages "Section" .Section) }}
+
   {{ range .Pages.ByParam "nep" }}
     {{ partial "nep-list-item" . }}
   {{ end }}

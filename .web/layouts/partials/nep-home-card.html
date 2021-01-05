@@ -1,0 +1,22 @@
+<div class="homecard">
+  <div class="container">
+    <div class="cardlayout heading">
+      <div class="title">
+        <span>Newton </span>
+        <span>Evolution </span>
+        <span>Proposals </span>
+      </div>
+    </div>
+    <div class="cardlayout stats">
+      <p class="heading"><a href="./NEPS">Total NEPs: {{ add (len (where .Site.Pages "Section" "NEPS")) -1 }}</a></p>
+      <div>
+        {{ range $name, $taxonomy := .Site.Taxonomies.Status }}
+        <div>
+          <span class="nep-status {{ lower $name }} home"><a href="/Status/{{ $name | urlize }}"><span class="count">{{ $taxonomy.Count }}</span> {{ $name | humanize }}</a></span>
+        </div>  
+        {{end}}
+      </div>
+      <p>Stats Updated on {{ now.Format "Jan 02, 2006 @ 3:04PM UTC"}}</p>
+    </div>
+  </div>
+</div>

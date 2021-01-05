@@ -1,5 +1,5 @@
 baseURL: https://neps.newton.bio/
-title: NEPs
+title: Newton Evolution Proposals (NEPs)
 # theme: newdocs
 theme: newdocs-hugo 
 
@@ -45,7 +45,7 @@ languages:
   en:
     languageName: English
     contentDir: contents
-    title: Newton NEPs
+    title: Newton Evolution Proposals (NEPs)
     weight: 1
     languagedirection: ltr
 

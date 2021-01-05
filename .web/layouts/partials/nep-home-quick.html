@@ -1,0 +1,7 @@
+<h3>Quick NEP Link</h3>
+
+{{ range where .Site.Pages "Section" "NEPS" }}
+  {{ range .Pages.ByParam "nep" }}
+    <a href="{{ .RelPermalink }}" title="{{ .Page.Title }}">NEP-{{ .Params.nep }}</a>
+  {{ end }}
+{{ end }}
