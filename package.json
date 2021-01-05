@@ -1,12 +1,11 @@
 {
-  "name": "NewtonNEPs",
-  "version": "0.1.0",
+  "name": "NEPS",
+  "version": "0.0.0",
   "description": "NewBridge Network Project Website",
   "scripts": {
-    "test": "echo \"no test specified\" && exit 1",
     "dev": "cd .web && npx hugo server",
-    "check-contents": "npx prettier --check ./contents*",
-    "format-contents": "npx prettier --write ./web*"
+    "fc": "npx prettier --check ./NEPS*",
+    "ff": "npx prettier --write ./NEPS*"
   },
   "repository": {
     "type": "git",

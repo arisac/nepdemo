@@ -1,21 +1,17 @@
-# NEP-N: Replace NEP Title (NRC-N)
-
-| Item | Description |
-|:-|:-|
-| NEP | to be assigned |
-| Title | NEP title (NRC) `The title should be 44 characters or less.`|
-| Author | a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)> |
-| Discussions to | URL |
-| Status | Draft |
-| Type | NRC |
-| Category | Technical |
-| Created | date created on, in ISO 8601 (yyyy-mm-dd) format |
-| Updated | date updated on, in ISO 8601 (yyyy-mm-dd) format |
+---
+NEP: X
+Title: "NEP Template Replace With Your Title"
+Authors: "[Author Name](mailto:email@domain.com), [First LastName](http://url)"
+Discussions: "https://github.com/newtonproject/NEPs#replace-to-your-url"
+Status: WIP
+Categories: Technical
+Types: Standard
+Created: YYYY-MM-DD
+---
 
 This is the suggested token template for new NEPs.
 
 Note that an NEP number will be assigned by an editor. When opening a pull request to submit your NEP, please use an abbreviated title in the filename, `nep-draft_title_abbrev.md`, and the NEP document should be placed under `NEPS` directory.
-
 
 ## Simple Summary
 
@@ -35,28 +31,26 @@ The technical specification should describe the syntax and semantics of any new 
 
 ### Meta Data (example)
 
-| Item | Description | Behaviors/Properties |
-|:-|:-|:-|
+| Item               | Description                             | Behaviors/Properties                        |
+| :----------------- | :-------------------------------------- | :------------------------------------------ |
 | **Creation Input** |
-| Creator | write creator to the contract | deploy/can not be changed |
-| Owner | Owner can take full control of contract | multi-owner? / can be changed? |
-| TokenName | Name of token, 3-5 letters | can not be changed |
+| Creator            | write creator to the contract           | deploy/can not be changed                   |
+| Owner              | Owner can take full control of contract | multi-owner? / can be changed?              |
+| TokenName          | Name of token, 3-5 letters              | can not be changed                          |
 | **After Creation** |
-| Admins | Owner can take full control of contract | multi-owner? / can be changed? read: public |
-| Members | | |
-
+| Admins             | Owner can take full control of contract | multi-owner? / can be changed? read: public |
+| Members            |                                         |                                             |
 
 ### Interaction / Functions (example)
 
-| Function | Description | Behaviors/Properties |
-|:-|:-|:-|
-| AddOwner | add owner to... | permission: owner |
-| TransferOwner | transfer own to other NEW Address | permission: owner |
-| CreateNewToken | Create new token from this contract |  |
-| AddMemberBySubscribe | | permission: contract |
-| RemoveMember | | permission: owner/admin |
-| RemoveExpiredMember | | permission: contract |
-
+| Function             | Description                         | Behaviors/Properties    |
+| :------------------- | :---------------------------------- | :---------------------- |
+| AddOwner             | add owner to...                     | permission: owner       |
+| TransferOwner        | transfer own to other NEW Address   | permission: owner       |
+| CreateNewToken       | Create new token from this contract |                         |
+| AddMemberBySubscribe |                                     | permission: contract    |
+| RemoveMember         |                                     | permission: owner/admin |
+| RemoveExpiredMember  |                                     | permission: contract    |
 
 ## Rationale (optional)
 
@@ -81,4 +75,5 @@ All NEPs must contain a section that discusses the security implications/conside
 ## References (optional)
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

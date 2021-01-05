@@ -2,6 +2,9 @@
 /.web/public
 /.web/resources
 
+# For local theme debug
+/.web/themes/newdocs-hugo
+
 # NPM
 node_modules
 

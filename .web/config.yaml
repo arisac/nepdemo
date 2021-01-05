@@ -1,6 +1,7 @@
 baseURL: https://neps.newton.bio/
 title: NEPs
-theme: newdocs
+# theme: newdocs
+theme: newdocs-hugo 
 
 ##########
 # NewDocs configuration
@@ -27,7 +28,7 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: monokai
+    style: solarized-dark
     tabWidth: 2
     # Styles To Choose From:
     # api, dracula, monokai, paraiso-dark, native, solarized-dark, solarized-dark-256, vim
@@ -59,8 +60,8 @@ menu:
   #     weight: 20
 
 ignoreFiles:
-  - ../contents*/menu
-  - ../contents*/NEPS/nep-template
+  - contents*/menu
+  - contents*/NEPS/nep-template*
 
 taxonomies:
   Category: Categories

@@ -10,10 +10,15 @@ Created: 2020-04-29
 Updated:
 ---
 
-
 ## Simple Summary
 
-A standard interface for invoice token.
+> A standard interface for invoice token.
+
+```
+hello
+```
+
+\_ello1 ` \_ haha
 
 ## Abstract
 
@@ -28,50 +33,51 @@ The invoice token will curb malpractice and document forgery in taxation and sim
 
 ### Meta Data
 
-| Item | Description | Behaviors/Properties |
-|:-|:-|:-|
-| Owner | can take full control of contract | deploy contract, add/remove addmin, set fee |
-| Admin | manage enterprise | authorize/revoke enterprise |
-| Enterprise | manage token(Invoice)  | issue/reimburse/invalidate token |
-| Fee | issue token(invoice) fee | uint ISSAC |
-| FeeAddress | fee withdrawal to this address | |
-| Invoice | contains operatorAddress, sellerTaxNumber, buyerTaxNumber, operatorName, invoiceInfo, status, financial | status: positive、negative(reversal)、blank cancellation、cancellation, financial: received、recorded |
+| Item       | Description                                                                                             | Behaviors/Properties                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
+| Owner      | can take full control of contract                                                                       | deploy contract, add/remove addmin, set fee                                                           |
+| Admin      | manage enterprise                                                                                       | authorize/revoke enterprise                                                                           |
+| Enterprise | manage token(Invoice)                                                                                   | issue/reimburse/invalidate token                                                                      |
+| Fee        | issue token(invoice) fee                                                                                | uint ISSAC                                                                                            |
+| FeeAddress | fee withdrawal to this address                                                                          |                                                                                                       |
+| Invoice    | contains operatorAddress, sellerTaxNumber, buyerTaxNumber, operatorName, invoiceInfo, status, financial | status: positive、negative(reversal)、blank cancellation、cancellation, financial: received、recorded |
 
 ### Interaction / Functions
 
-| Function | Description | Behaviors/Properties |
-|:-|:-|:-|
-|**owner**|
-| addAdmin | add admin to this contract | permission: owner |
-| removeAdmin | remove admin from this contract | permission: owner |
-| setFee | set issue fee，uint ISSAC | permission: owner |
-| setFeeAddress | set issue fee withdrawal address | permission: owner |
-| withdraw | withdrawal to feeAddress | permission: owner |
-|**admin**|
-| authorize | authorized _enterpriseAddress to join contract | permission: admin |
-| revoke | revoke _enterpriseAddress from this contract | permission: admin |
-|**enterprise**|
-| issue | issue new token(Invoice) by msg.sender | permission: enterprise |
-| issueFrom | issue new token(Invoice) by the approved address of the seller | permission: enterprise |
-| reimburse | change Invoice financial status from received to recorded | permission: enterprise |
-| invalidate | change Invoice status from positive to _newStatus | permission: enterprise |
+| Function          | Description                                                                                             | Behaviors/Properties   |
+| :---------------- | :------------------------------------------------------------------------------------------------------ | :--------------------- |
+| **owner**         |
+| addAdmin          | add admin to this contract                                                                              | permission: owner      |
+| removeAdmin       | remove admin from this contract                                                                         | permission: owner      |
+| setFee            | set issue fee，uint ISSAC                                                                               | permission: owner      |
+| setFeeAddress     | set issue fee withdrawal address                                                                        | permission: owner      |
+| withdraw          | withdrawal to feeAddress                                                                                | permission: owner      |
+| **admin**         |
+| authorize         | authorized \_enterpriseAddress to join contract                                                         | permission: admin      |
+| revoke            | revoke \_enterpriseAddress from this contract                                                           | permission: admin      |
+| **enterprise**    |
+| issue             | issue new token(Invoice) by msg.sender                                                                  | permission: enterprise |
+| issueFrom         | issue new token(Invoice) by the approved address of the seller                                          | permission: enterprise |
+| reimburse         | change Invoice financial status from received to recorded                                               | permission: enterprise |
+| invalidate        | change Invoice status from positive to \_newStatus                                                      | permission: enterprise |
 | setApprovalForAll | enable or disable approval for a third party ("operator") to manage all of `msg.sender`'s invoice token | permission: enterprise |
-|**Query**|
-| totalSupply | return issue invoices fee total |  |
-| balanceOfSeller | return sell invoices count | |
-| balanceOfBuyer | return buy invoices count | |
-| tokenById | return Invoice info | |
-| getFee | return issue invoice fee | |
-| getFeeSum | return contract revenue | |
-| getFeeBalance | return contract balance | |
-| isApprovedForAll | check is authorizationed | |
-| isExist | check token is existed | |
+| **Query**         |
+| totalSupply       | return issue invoices fee total                                                                         |                        |
+| balanceOfSeller   | return sell invoices count                                                                              |                        |
+| balanceOfBuyer    | return buy invoices count                                                                               |                        |
+| tokenById         | return Invoice info                                                                                     |                        |
+| getFee            | return issue invoice fee                                                                                |                        |
+| getFeeSum         | return contract revenue                                                                                 |                        |
+| getFeeBalance     | return contract balance                                                                                 |                        |
+| isApprovedForAll  | check is authorizationed                                                                                |                        |
+| isExist           | check token is existed                                                                                  |                        |
 
 ## Test Cases
 
 The reference implementation contains all the [tests](https://gitlab.newtonproject.org/newton-invoice/newton-invoice-contract/tree/master/test).
 
 ## Implementation
+
 ```solidity
 pragma solidity ^0.5.0;
 
@@ -168,7 +174,9 @@ interface INRC10{
 The [reference implementation](https://gitlab.newtonproject.org/newton-invoice/newton-invoice-contract)
 
 ## References
+
 1. ERC-721 Token Standard. https://eips.ethereum.org/EIPS/eip-721
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

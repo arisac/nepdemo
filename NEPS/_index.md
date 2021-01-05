@@ -1,4 +1,4 @@
 ---
-title: All NEPs
+title: NEPs
 menu: main
 ---
