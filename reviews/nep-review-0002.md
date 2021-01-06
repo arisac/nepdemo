@@ -1,5 +1,7 @@
 ---
 title: NEP Board Review 0002
+description: NEP-19 Draft
+date: 2020-06-05
 ---
 
 ## Results

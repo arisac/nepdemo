@@ -9,7 +9,7 @@
       {{ end }}
 
       {{ if .Params.authors }}
-      {{ printf "%T" .Params.authors }}
+      {{/* printf "%T" .Params.authors */}}
         <span class="authors">
           <i class="far fa-user"></i>
           {{ if eq (printf "%T" .Params.authors) "[]string" }}

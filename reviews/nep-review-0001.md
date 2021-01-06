@@ -1,5 +1,7 @@
 ---
 title: NEP Board Review 0001
+description: NEP-6 Draft, NEP-7 Draft, NEP-10 Draft, NEP-12 Draft
+date: 2020-05-09
 ---
 
 ## Results

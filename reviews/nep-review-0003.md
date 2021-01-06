@@ -1,6 +1,7 @@
 ---
 title: NEP Board Review 0003
-date: 2020-02-01
+description: NEP-12 Draft, NEP-20 Draft, NEP-21 Draft, NEP-22 Draft, NEP-23 Draft, NEP-24 Draft
+date: 2020-06-21
 ---
 
 ## Results
@@ -29,7 +30,7 @@ date: 2020-02-01
 | NEP Board Member | [@xujizhe](https://github.com/xujizhe)             | unregistered                            |                                                                                                                                      |                                                                                                                                   |                                                                                                                                   |                                                                                                                                   |                                                                                                                                   |                                                                                                                                   |
 | NEP Board Member | [@zqy15789](https://github.com/zqy15789)           | NEW182EFjxZjxRJcfBdJBHEuMTYNsK7RLTFeiiJ | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0x0bdf869d5f56948b4cae590eb4ace321a47174eeeba4b0a1ca705c995011a2b8)       | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0xafe304c44d23eadabcab56d3610fee271f89406f77ca5df124acda12d35a63db)    | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0x7919f8935c40162bcce063e0fd0e444c461d364968b2bf49b6332ecf40f01d9b)    | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0x0feecf12d60f62527ebb9facf2e757f8a534baa9b7028d9acbe78ff8500edbe5)    | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0x8797983ed00dd06232670ed69224a21e6192b5ef4859edc2badab778ceca24ce)    | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0xa4b6b38efba3b706d0e2c26b3d8f689bb8fc562484d5c7cbefde880524832353)    |
 
-# Notice
+## Notice
 
 **NEPs to review:** [NEP-20](#nep-20), [NEP-21](#nep-21), [NEP-22](#nep-22), [NEP-23](#nep-23), [NEP-24](#nep-24), [NEP-12](#nep-12)
 
