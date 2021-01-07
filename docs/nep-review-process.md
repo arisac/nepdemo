@@ -2,6 +2,62 @@
 title: NEP Review Process
 ---
 
+{{< hint info >}}
+This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+{{< /hint >}}
+
+## General NEP Flow
+
+### Submit a NEP for the first time
+
+**Draft** > `pr` > assign NEP number > JUDGE > `merge` > complete
+
+{{< details "Flowchart" open>}}
+  {{<mermaid class="text-center">}}
+    graph TD
+      userDraft[NEP-X Draft] --> |PR to NEPs repo| DraftPR[NEP-X Draft]
+      DraftPR --> |Assign NEP number| Draft[NEP-N Draft]
+      Draft --> JUDGE{JUDGE}
+      JUDGE --> |pass| Merge[Merged to NEPs repo]
+      JUDGE --> |not pass| Draft
+  {{</mermaid >}}
+{{< /details >}}
+
+### Update a NEP Draft
+
+**Draft** > `pr` > JUDGE > `merge` > complete
+
+### Make a NEP Draft to NEP Final
+
+**Draft** > `issue` > JUDGE > **Public Call** > **Final / Active** > complete
+
+## NEP Status
+
+### Flowchart
+
+{{<mermaid class="text-center">}}
+    graph TD
+      WIP --> |PR| Draft
+      subgraph "NEP Review Process"
+        Draft --> Abandoned
+        Draft --> Rejected
+        Draft --> PublicCall[Public Call]
+      end
+
+      PublicCall --> Draft
+      PublicCall --> Final
+      PublicCall --> Active
+
+      subgraph "Status Change on Conditions"
+        Final -->  Deferred
+        Deferred --> Implemented
+        Final -->  Implemented
+        Implemented --> Replaced[Replaced / Superseded]
+        Final -->  Replaced
+      end
+  {{</mermaid >}}
+
+
 <details><summary>General NEP Flow</summary>
 
 ## General NEP Flow

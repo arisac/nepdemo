@@ -3,12 +3,12 @@ NEP: 6
 Title: "Basic Token Standard (NRC-6)"
 Authors: "[Yong Liu](mailto:liuyong5653@163.com), [Qu Jianwei](https://github.com/i29), [LiuChao](https://github.com/LiuChaooo)"
 Discussions: https://github.com/newtonproject/NEPs/issues/6
-Status: replaced
+Status: Superseded
 Categories: Technical
 Types: "NRC"
 Created: 2020-04-29
 Updated: 2020-04-29, 2020-04-29, 2020-04-29, 2020-04-29
-ReplacedBy: 1
+SupersededBy: 1
 ---
 
 ## Simple Summary

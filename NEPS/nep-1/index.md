@@ -4,6 +4,7 @@ Title: "Improvement to Newton Foundation reserved token release rules"
 Authors: "[Xu Jizhe](xujizhe@newtonproject.org)"
 Discussions:
 Status: Implemented
+Superseding: 6
 Categories: Economic Model
 Created: 2018-11-19
 Updated:

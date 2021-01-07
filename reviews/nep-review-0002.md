@@ -25,7 +25,7 @@ date: 2020-06-05
 | NEP Board Member | [@xujizhe](https://github.com/xujizhe)             | unregistered                            |                                                                                                                                   |
 | NEP Board Member | [@zqy15789](https://github.com/zqy15789)           | NEW182EFjxZjxRJcfBdJBHEuMTYNsK7RLTFeiiJ | Accept [NewExplorer](https://explorer.newtonproject.org/tx/0xe751981cabbddd7138b724992075ffe4516ed03553e8e9e8e0a8908a32075f91)    |
 
-# Notice
+## Notice
 
 Voting Period: 2020-06-04 12:00 UTC+8 to 2020-06-05 13:00 UTC+8
 

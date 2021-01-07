@@ -50,17 +50,17 @@
     border-color: #{$color};
     color: #{$color};
   }
-  &.wip, &.replaced {
+  &.wip, &.replaced, &.superseded {
     $color: $color-info;
     border-color: #{$color};
     color: #{$color};
   }
-  &.implemented, &.active, &.final {
+  &.implemented, &.active, &.deferred, &.final {
     $color: $color-green;
     border-color: #{$color};
     color: #{$color};
   }
-  &.abandoned, &.rejected, &.superseded, &.withdrawn {
+  &.abandoned, &.rejected, &.withdrawn {
     $color: $color-red;
     border-color: #{$color};
     color: #{$color};
@@ -81,6 +81,7 @@
   border-collapse: collapse;
   th {
     text-align: right;
+    font-weight: normal;;
   }
   & th, & td {
     border: solid 1px var(--fbg-300) !important;
@@ -100,9 +101,7 @@
   .container {
     width: 80%;
     margin: 0 auto;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	  background-size: 400% 400%;
-	  animation: home-card-gradient 15s ease infinite;
+
     display: flex;
     padding: $as-lg;
     overflow: hidden;
@@ -113,6 +112,14 @@
     }
     @extend .rounded-xl;
     @extend .box-shadow;
+
+    // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	  // background-size: 400% 400%;
+	  // animation: home-card-gradient 15s ease infinite;
+    .vanta-canvas {
+      @extend .rounded-xl;
+    }
+
     > .cardlayout {
       flex-grow: 1;
       width: 50%;
@@ -209,9 +216,14 @@
 }
 
 .nep-quick-list {
-  background: linear-gradient(-45deg, #0099ff, #bf3ce7);
+  // background: linear-gradient(-45deg, #0099ff, #bf3ce7);
+  // background-size: 400% 400%;
+  // animation: home-card-gradient 15s ease infinite;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: home-card-gradient 15s ease infinite;
+
   h3 {
     color: white;
   }

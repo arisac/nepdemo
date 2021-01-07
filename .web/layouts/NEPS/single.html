@@ -24,8 +24,11 @@
       {{ if .Params.status }}
         <tr><th>Status</th><td><span class="nep-status {{ lower .Params.status }}">{{ .Params.status }}</span></td></tr>
       {{ end }}
-      {{ if .Params.ReplacedBy }}
-        <tr><th>Replaced By</th><td><a href="../nep-{{ .Params.ReplacedBy }}">NEP-{{ .Params.ReplacedBy }}</a></td></tr>
+      {{ if .Params.SupersededBy }}
+        <tr><th>Superseded By</th><td><a href="../nep-{{ .Params.SupersededBy }}">NEP-{{ .Params.SupersededBy }}</a></td></tr>
+      {{ end }}
+      {{ if .Params.Superseding }}
+        <tr><th>Superseding</th><td><a href="../nep-{{ .Params.Superseding }}">NEP-{{ .Params.Superseding }}</a></td></tr>
       {{ end }}
       <tr><th>Created</th><td>{{ .Params.created }}</td></tr>
       {{ if .Params.updated }}

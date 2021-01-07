@@ -3,7 +3,7 @@ NEP: 22
 Title: "Newton Composite Asset (NCA)"
 Authors: "[Ben Koo](mailto:koo0905@gmail.com)"
 Discussions: https://github.com/newtonproject/NEPs/issues/22
-Status: Draft
+Status: Deferred
 Categories: Technical
 Types: Standard
 Created: 2020-04-24

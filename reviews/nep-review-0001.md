@@ -30,7 +30,7 @@ date: 2020-05-09
 | NEP Board Member | [@xujizhe](https://github.com/xujizhe)             | unregistered                            |                                                                                                                                           |                                                                                                                                           |                                                                                                                                           |                                                                                                                                           |
 | NEP Board Member | [@zqy15789](https://github.com/zqy15789)           | NEW182EFjxZjxRJcfBdJBHEuMTYNsK7RLTFeiiJ | Accept [View on NewExplorer](https://explorer.newtonproject.org/tx/0x66bfe8985e22000b829a612b324fd44994daa94bfa1618bebb8de21f6635c6f1)    | Accept [View on NewExplorer](https://explorer.newtonproject.org/tx/0x5520cf81571b7e2545cb38d5101aeac941b5aeaa2e614668090a2d11a646e9c2)    | Accept [View on NewExplorer](https://explorer.newtonproject.org/tx/0x1f1bd63b459a1a9c6fb8a218d65fd35b9cf844679f900744c9b7845e03015e5f)    |                                                                                                                                           |
 
-# Notice
+## Notice
 
 Voting Period: 2020-05-08 12:00 UTC+8 to 2020-05-09 12:00 UTC+8
 

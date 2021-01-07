@@ -1,14 +1,13 @@
 ---
 title: NEP Submission Guides for Beginners
+description: This guide is for those unfamiliar with the NEP Review Process and provides simple instructions for BEP submission, update, and request for final. This guide won't cover complex NEP status change and other requests described in NEPs Guideline.
 ---
 
-This guide is for those unfamiliar with the NEP Review Process and provides simple instructions for BEP submission, update, and request for final. This guide won't cover complex NEP status change and other requests described in NEPs Guideline.
+{{< hint info >}}
+This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+{{< /hint >}}
 
-**Contents**
-- [Start A NEP](#start-a-nep)
-- [To Submit A NEP for The First Time](#to-submit-nep-for-the-first-time)
-- [To Update a Draft NEP](#to-update-a-draft-nep)
-- [To Make A NEP to Final](#to-make-a-nep-to-final)
+This guide is for those unfamiliar with the NEP Review Process and provides simple instructions for BEP submission, update, and request for final. This guide won't cover complex NEP status change and other requests described in NEPs Guideline.
 
 ## Start A NEP
 
