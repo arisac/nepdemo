@@ -1,6 +1,7 @@
 ---
 title: NEP Format and Templates
 description: NEP Format and Templates
+weight: 31
 ---
 
 This document will cover:
@@ -12,7 +13,6 @@ This document will cover:
 - NEP Content Format
 
 - NEP Templates
-
 
 ## I. NEP Document Directory
 
@@ -28,6 +28,7 @@ NEPs Root Directory
 |   |   ├── image2.jpg    // image used in NEP
 |   |   └── filename.ext  // file used in NEP
 ```
+
 ### NEP Document File
 
 NEP Doument file is `index.md` file in it's directory.
@@ -64,23 +65,24 @@ Created: YYYY-MM-DD
 
 ### 1. NEP
 
--  _*required_
-  
+- _\*required_
+
 - NEP number (this is determined by the NEP editor)
 
 ### 2. Title
 
--  _*required_
+- _\*required_
 
 - NEP title quoted with `" "`
 
 ### 3. Authors
 
--  _*required_
+- _\*required_
 
 - A list of the author’s or authors’ name(s) and/or username(s), or name(s) and email(s). Details are below.
 
 {{< details "Authors Examples" >}}
+
 ```
 # Author with Email
 Authors: "[First Last](mailto:name@domain.ext)"
@@ -91,11 +93,12 @@ Authors: "[First Last](https://domain.ext)"
 # Multiple Authors
 Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), [Author 3](mailto:aurhtor3@domain.ext)"
 ```
+
 {{< /details >}}
 
 ### 4. Discussions
 
--  _*required_
+- _\*required_
 
 - While an NEP is a draft, a discussions-to header will indicate the mailing list or URL where the NEP is being discussed.
 
@@ -105,7 +108,7 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 5. Status
 
--  _*required_
+- _\*required_
 
 - WIP, Draft, Public Call, Final etc.
 
@@ -113,7 +116,7 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 6. Categories
 
--  _*required_
+- _\*required_
 
 - NEP currently has 5 categories: `Economic Model`, `Personnel`, `Technical`, `Community Governance` and `Business`
 
@@ -121,13 +124,13 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 7. Created
 
-- _*required_
+- _\*required_
 
 - Date for first created in `YYYY-MM-DD` format
 
 ### 8. Updated
 
-- Comma separated list of dates. 
+- Comma separated list of dates.
 
 - e.g. `2020-10-23` or `2020-10-23, 2020-11-01, 2020-12-13`
 
@@ -151,23 +154,23 @@ The order of NEP Header Preamble Item is not enforced, but it is recommended to 
 
 ```
 ---
-NEP: 
-Title: 
-Authors: 
-Discussions: 
-Status: 
-SupersededBy: 
-Superseding: 
-Categories: 
-Types: 
-Created: 
-Updated: 
+NEP:
+Title:
+Authors:
+Discussions:
+Status:
+SupersededBy:
+Superseding:
+Categories:
+Types:
+Created:
+Updated:
 ---
 ```
 
 ## III. NEP Content Format
 
-NEP Content should be written in **Markdown** format. Markdown formatting is widely used in websites and documents, also there were dozens of implementations in many languages and software applications. 
+NEP Content should be written in **Markdown** format. Markdown formatting is widely used in websites and documents, also there were dozens of implementations in many languages and software applications.
 
 **CommonMark Spec** is a standard for Markdown and adopted by many applications. To see the latest **CommonMark Spec** please visit [https://spec.commonmark.org](https://spec.commonmark.org).
 

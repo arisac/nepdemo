@@ -1,5 +1,7 @@
 ---
 title: Contributing a NEP
+weight: 10
+description: Guide for start a NEP and making updates
 ---
 
 {{< hint info >}}

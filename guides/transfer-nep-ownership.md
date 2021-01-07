@@ -1,7 +1,7 @@
 ---
 title: Transferring NEP Ownership
 description: It occasionally becomes necessary to transfer ownership of NEPs to a new champion.
-
+weight: 201
 ---
 
 {{< hint info >}}

@@ -1,6 +1,7 @@
 ---
 title: NEP Status
 description: Standard NEP Status for Newton Evolution Proposals.
+weight: 41
 ---
 
 {{< hint info >}}
@@ -31,7 +32,7 @@ Statuses listed below is the Standard NEP Status for Newton Evolution Proposals.
 
 ### 1. WIP(Work In Progress)
 
-**WIP**: Work In Progress is the status before a NEP is submitted to Newton for review. The champion can use other status name such as an *IDEA* to share the NEP for discussion outside Newton's Github repository.
+**WIP**: Work In Progress is the status before a NEP is submitted to Newton for review. The champion can use other status name such as an _IDEA_ to share the NEP for discussion outside Newton's Github repository.
 
 #### `WIP` --> `Draft`
 
@@ -117,18 +118,16 @@ Statuses listed below is the Standard NEP Status for Newton Evolution Proposals.
 
 **Rejected**: An NEP that is fundamentally broken. An NEP cannot move on from this state.
 
-
-
 ## III. Flowchart
 
 {{<mermaid class="text-center">}}
-    graph TD
-      WIP --> |PR| Draft
-      subgraph "NEP Review Process"
-        Draft --> Abandoned
-        Draft --> Rejected
-        Draft --> PublicCall[Public Call]
-      end
+graph TD
+WIP --> |PR| Draft
+subgraph "NEP Review Process"
+Draft --> Abandoned
+Draft --> Rejected
+Draft --> PublicCall[Public Call]
+end
 
       PublicCall --> Draft
       PublicCall --> Final
@@ -141,4 +140,5 @@ Statuses listed below is the Standard NEP Status for Newton Evolution Proposals.
         Implemented --> Superseded
         Final -->  Superseded
       end
-  {{</mermaid >}}
+
+{{</mermaid >}}
