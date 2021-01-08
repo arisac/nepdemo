@@ -8,174 +8,186 @@ description: How NEP is proccessed and status is changed during the process
 This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
 {{< /hint >}}
 
-## General NEP Flow
+## Shepherding a NEP
 
-### Submit a NEP for the first time
+Parties & Roles involved in the process a NEP are: NEP you, the NEP Champion(Lead) or Authors, NEP Editors, NEP Review Board, and the Public Communnity.
 
-**Draft** > `pr` > assign NEP number > JUDGE > `merge` > complete
+Before you begin writing a formal NEP, you should vet your idea. Ask the Newton community first if an idea is original to avoid wasting time on something that will be be rejected based on prior research.
 
-{{< details "Flowchart" open>}}
-{{<mermaid class="text-center">}}
-graph TD
-userDraft[NEP-X Draft] --> |PR to NEPs repo| DraftPR[NEP-X Draft]
-DraftPR --> |Assign NEP number| Draft[NEP-N Draft]
-Draft --> JUDGE{JUDGE}
-JUDGE --> |pass| Merge[Merged to NEPs repo]
-JUDGE --> |not pass| Draft
-{{</mermaid >}}
-{{< /details >}}
-
-### Update a NEP Draft
-
-**Draft** > `pr` > JUDGE > `merge` > complete
-
-### Make a NEP Draft to NEP Final
-
-**Draft** > `issue` > JUDGE > **Public Call** > **Final / Active** > complete
-
-## NEP Status
-
-### Flowchart
-
-{{<mermaid class="text-center">}}
-graph TD
-WIP --> |PR| Draft
-subgraph "NEP Review Process"
-Draft --> Abandoned
-Draft --> Rejected
-Draft --> PublicCall[Public Call]
-end
-
-      PublicCall --> Draft
-      PublicCall --> Final
-      PublicCall --> Active
-
-      subgraph "Status Change on Conditions"
-        Final -->  Deferred
-        Deferred --> Implemented
-        Final -->  Implemented
-        Implemented --> Replaced[Replaced / Superseded]
-        Final -->  Replaced
-      end
-
-{{</mermaid >}}
-
-<details><summary>General NEP Flow</summary>
+In addition to making sure your idea is original, it will be your role as the author to make your idea clear to reviewers and interested parties, as well as inviting editors, developers and community to give feedback. You should try and gauge whether the interest in your NEP is commensurate with both the work involved in implementing it and how many parties will have to conform to it. Negative community feedback will be taken into consideration and may prevent your NEP from moving past the Draft stage.
 
 ## General NEP Flow
 
-### 1. Submit a NEP for the first time
+```bash
+General NEP Status Flow
+---
+"WIP" -> "Draft" -> "Public Call" -> "Final / Active"
+```
 
-**Draft** > `pr` > assign NEP number > JUDGE > `merge` > complete
+See [NEP Status](nep-status.md) for more NEP Statuses and flowchart.
 
-### 2. Update a NEP Draft
+### I. Submit a NEP Draft for the first time
 
-**Draft** > `pr` > JUDGE > `merge` > complete
+Follow the procedure in Contributing a NEP or NEP Submission Guides for Beginners to Start a NEP.
 
-### 3. Make a NEP Draft to NEP Final
+Once the NEP is ready to become a `Draft`, create a PR to the NEPs repository.
 
-**Draft** > `issue` > JUDGE > **Public Call** > **Final / Active** > complete
+#### NEP Process
 
-</details>
+```bash --simplified
+# Submit a NEP Draft for the first time
+NEP_Status = "WIP"
+$Authors:
+  change NEP_Status = "Draft"
+  create PR = "New NEP-X Draft"
+{ CHECK CONTENTS }
+  $NEP_Editor:
+    case Good >> { ASSIGN NUMBER }
+    case Ready >> { BOARD REVIEW }
+    case Require Edit
+      request $Authors to Edit >> { CHECK CONTENTS }
+    case Not Pass && Will Not Continue
+      PR = "Closed" && exit NEP Process
+{ ASSIGN NUMBER }
+  $NEP_Editor:
+    assign NEP_Number = "Issue/PR Number"
+    update PR = "New NEP-# Draft" && >> { CHECK CONTENTS }
+{ BOARD REVIEW }
+  $NEP_Review_Board:
+    case Accept
+      PR = "Merged" && exit NEP Process
+    case Deny
+      PR = "Closed" && exit NEP Process
+```
 
-<details><summary>Status Flow</summary>
+### II. Update a NEP Draft
 
-## Status Flow Chart
+- Only NEP in `Draft` status can accept updates
 
-http://processon.com/chart_image/5e9edf235653bb6efc60d7e8.png the flow chart below is updated from time to time. the browser may display from browser/github cache instead the latest one. visit url to view the latest.
-![status flow](https://processon.com/chart_image/5e9edf235653bb6efc60d7e8.png#update8)
+- You have to be one of the Authors to update a NEP
 
-</details>
+To update a Draft NEP, you must be one of the Authors mentioned in the NEP. If you are not amount the authors, your submission will be rejected. Contact the NEP Authors you are willing to join and ask them to add you to the NEP first.
 
-<details><summary>Roles & Responsibilities</summary>
+If you tried contact the Authors and get no response, you may ask the NEP Editors for assistance. If the NEP Editors can't reach the NEP Authors, the editor may consider they have abandoned the NEP and change the status to abandoned. You may work on that and submit new updates to that NEP.
 
-## Main responsibilities for each role during a NEP review
+#### NEP Process
 
-**Champion(Lead) & Authors**
+```bash --simplified
+# Update a NEP Draft
+NEP_Status = "Draft"
+$Authors:
+  create PR = "Update NEP-# Draft"
+{ CHECK CONTENTS }
+  $NEP_Editor:
+    case Ready >> { CHECK IF REVIEW REQUIRED }
+    case Require Edit
+      request $Authors to Edit >> { CHECK CONTENTS }
+    case Not Pass && Will Not Continue
+      PR = "Closed" && exit NEP Process
+{ CHECK IF REVIEW REQUIRED }
+  $NEP_Editor:
+    case Required >> { BOARD REVIEW }
+    case Not Requred
+      PR = "Merged" && exit NEP Process
+{ BOARD REVIEW }
+  $NEP_Review_Board:
+    case Accept
+      PR = "Merged" && exit NEP Process
+    case Deny
+      PR = "Closed" && exit NEP Process
+```
 
-- answer questions
+### III. Make a NEP Draft to NEP Final / Active
 
-**Bots**
+- A NEP `Draft` must be already in Newton NEPs repository before requesting for it to be finalised to `Final` / `Active`
 
-- multiple bots may be required to perform different tasks with different permissions
-- PR Format Check
-  - check header
-  - check format
-  - check URLs
-- Advanced Functions
-  - NLP check (offensive words, non-sense descriptions etc.)
-  - check required fields for each category & type
-  - check forbidden assets
-  - run code test
-- Repo Maintenances
-  - merge if passed bots & editor review
-  - update NEPs TOC files after merge/status change
-- Messenger/Notify
-  - notify editors & review board members after merge/status change
-- Webhooks
-  - performing tasks for other services e.g. test bots/services, html formatter bots/services
-  - notify newton website server to update NEPs list on website
+- You have to be one of the Authors to make a NEP `Final` / `Active`
 
-**NEP Editors**
+- Once a NEP become `Final`. It can no longer accept changes
 
-- check descriptions in each part
-- check if duplicate
-- check if not obey newton principle
-- simple code check
-- assign number
+- Create an PR in Newton's NEPs repository on Github
 
-**Review Board**
+- Tell why you think it can be finalised in description
 
-- anything
+If you are not amount the authors, your submission will be rejected. Contact the NEP Authors you are willing to join and ask them to add you to the NEP first.
 
-**Public**
+If you tried contact the Authors and get no response, you may ask the NEP Editors for assistance. If the NEP Editors can't reach the NEP Authors, the editor may consider they have abandoned the NEP and change the status to abandoned. You may work on that and submit new updates to that NEP.
 
-- anything
+#### NEP Process
 
-</details>
+```bash --simplified
+# Make a NEP Draft to NEP Final
+NEP_Status = "Draft"
+$Authors:
+  change NEP_Status = "Public Call"
+  create PR = "Make NEP-# Final"
+{ CHECK CONTENTS }
+  $NEP_Editor:
+    case Ready >> { BOARD REVIEW }
+    case Not Pass && Will Not Continue
+      PR = "Closed" && exit NEP Process
+{ BOARD REVIEW }
+  $NEP_Review_Board:
+    case Accept
+      PR = "Merged" && >> { PUBLIC REVIEW }
+    case Deny
+      PR = "Closed" && exit NEP Process
+{ PUBLIC REVIEW }
+  case Accept
+    NEP_Status = "Final" && exit NEP Process
+  case Deny
+    NEP_Status = "Draft" && exit NEP Process
+```
 
-## First NEP Draft Review
+### IV. Update an Active NEP
 
-Since a new NEP Draft is just a start and it may needs improvements later in the future updates.
-We should help a new NEP to pass as easy as possible as long as it's not fundamentally incorrect.
+- You have to be one of the Authors to update an `Active` NEP
 
-As long as no Board Member says it's fundamentally incorrect. A 50% approval will result the NEP Draft goes into our NEPs repo.
+- An `Active` status NEP can accept updates for adding features, but other parts can not be changes
 
-Voting process for NEP approval should happen on NewChain:
+#### NEP Process
 
-For each vote to start, a NEP Editor should make a transaction to NEP New Address, indicates the topic for voting and end time.
+```bash --simplified
+# Update an Active NEP
+NEP_Status = "Active"
+$Authors:
+  create PR = "Update Active NEP-#"
+{ CHECK CONTENTS }
+  $NEP_Editor:
+    case Ready >> { CHECK IF REVIEW REQUIRED }
+    case Require Edit
+      request $Authors to Edit >> { CHECK CONTENTS }
+    case Not Pass && Will Not Continue
+      PR = "Closed" && exit NEP Process
+{ CHECK IF REVIEW REQUIRED }
+  $NEP_Editor:
+    case Required >> { BOARD REVIEW }
+    case Not Requred
+      PR = "Merged" && exit NEP Process
+{ BOARD REVIEW }
+  $NEP_Review_Board:
+    case Accept
+      PR = "Merged" && exit NEP Process
+    case Deny
+      PR = "Closed" && exit NEP Process
+```
 
-For Board Members to vote, Members should make a transaction to NEP New Address, leaving their decisions in the transaction notes.
+## Special NEP Flow
 
-NEP Editors should count the vote and make the
+```bash
+Special NEP Status Flow
+---
+"Draft" -> "Abandoned" -> "Draft"
+"Final" -> "Implemented"
+"Final" -> "Deferred" -> "Implemented"
+"Final" / "Implemented" -> "Superseded"
+"Draft" -> "Rejected"
+```
 
-## NEP Editors
+### Flow of Abandoned NEP
 
-The current NEP editors are:
+### NEP Final become Implemented or Deferred
 
-| GitHub ID                                      | NEW Address                             |
-| ---------------------------------------------- | --------------------------------------- |
-| [@arisac](https://github.com/arisac)           | NEW182LTNoiufc9tiveZdno3HXH5yEmUURKUiac |
-| [@liuyong5653](https://github.com/liuyong5653) | NEW182VbmZs3TyC268wz7Kq4Cznssv7WzRPDq7j |
-| [@weixuefeng](https://github.com/weixuefeng)   | NEW182PdJBJoMnGAub6KJ6YrhSPHWrFE9RSBmGE |
-| [@zhouxiqiao](https://github.com/zhouxiqiao)   | NEW182Vzd7pgjGjNCKVB7831yFCT5yuhSfRnfgA |
+### NEP got Superseded
 
-## Review Board
-
-The current Review Board members are:
-
-| Display Name | GitHub ID                                          | NEW Address                             |
-| ------------ | -------------------------------------------------- | --------------------------------------- |
-| Mr. Koo      | [@benkoo](https://github.com/benkoo)               | NEW182XacauX8woduncHaXTzNGCFnk7B15z34hi |
-| Evan Liu     | [@evanliuchina](https://github.com/evanliuchina)   | NEW182Jqu3ok6ZnjkLAyhpSw9WEJXhEwUYX4jLR |
-| Qu Jianwei   | [@i29](https://github.com/i29)                     | NEW182TpZToiXBk1SkR1bMJLUxguPxFsZciz123 |
-| Jiang Tao    | [@jiangtao-tang](https://github.com/jiangtao-tang) | NEW182XmN8jkgnkW8rtu9jRriQJjnEBXSbZZuHJ |
-| Lee Willson  | [@leewillson](https://github.com/leewillson)       | NEW182ZheiEbSBW3SbtETmXEgdG5X9GvFuLRun2 |
-| VieYang      | [@VieYang](https://github.com/VieYang)             | NEW182bMUiAM1nXMjcwri8zNrgZftcnPJc1uVie |
-| xiawu        | [@xiawu](https://github.com/xiawu)                 | NEW182Kt8siZGciPGBss3rg7GmJqfZ7CUafVUHH |
-| Xu Jizhe     | [@xujizhe](https://github.com/xujizhe)             | unregistered                            |
-| zqy15789     | [@zqy15789](https://github.com/zqy15789)           | NEW182EFjxZjxRJcfBdJBHEuMTYNsK7RLTFeiiJ |
-
-## Reference
-
-- [NEP/EIP/BIP/PEP Comparison](https://github.com/arisac/newton-general/blob/master/D-02.proposal-comparison.md)
+### Rejected NEP

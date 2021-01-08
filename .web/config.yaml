@@ -28,7 +28,7 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: solarized-dark
+    style: dracula
     tabWidth: 2
     # Styles To Choose From:
     # api, dracula, monokai, paraiso-dark, native, solarized-dark, solarized-dark-256, vim

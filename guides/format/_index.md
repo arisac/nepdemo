@@ -7,26 +7,23 @@ weight: 31
 This document will cover:
 
 - NEP Document Directory
-
-- NEP Header Preamble
-
-- NEP Content Format
-
 - NEP Templates
+- NEP Header Preamble
+- NEP Content Format
 
 ## I. NEP Document Directory
 
-```
-NEPs Root Directory
--------------------
-.
-└── NEPS
-|   └── nep-x             // `x` is the NEP Number
-|   |   └── index.md      // main NEP Document in English
-|   |   └── index.zh.md   // main NEP Document in Chinese
-|   |   ├── image1.png    // image used in NEP
-|   |   ├── image2.jpg    // image used in NEP
-|   |   └── filename.ext  // file used in NEP
+```js (just using the syntax highlight)
+// NEPs Document Directory
+./
+└─ NEPS/
+|  └─ nep-x/           // `x` is the NEP Number
+|  |  ├─ index.md      // main NEP Document in English
+|  |  ├─ index.zh.md   // main NEP Document in Chinese
+|  |  ├─ image1.png    // image used in NEP
+|  |  ├─ image2.jpg    // image used in NEP
+|  |  └─ filename.ext  // file used in NEP
+|  └─ nep-template/    // this is the NEP Template Folder
 ```
 
 ### NEP Document File
@@ -47,11 +44,31 @@ If your NEP requires images, the image files should be included in the same dire
 
 - If you must include an executable file like `js`, change the extension to `txt` instead.
 
-## II. NEP Header Preamble
+## II. NEP Templates
+
+```js (just using the syntax highlight)
+// NEP Template Directory
+./
+└─ NEPS/
+|  └─ nep-template/    // this is the NEP Template Folder
+|  |  └─ index.md      // this is the NEP Template Document
+|  └─ nep-x/           // your NEP-X Folder
+|  |  └─ index.md      // your NEP-X Document
+```
+
+To use the NEP Template, copy `nep-template` folder to `nep-x` folder and start your NEP with `nep-x/index.md`.
+
+Current available templates:
+
+- General NEP Template `./NEPS/nep-template/`
+
+- NEP Template for Token (NRC) `./NEPS/nep-template-nrc/`
+
+## III. NEP Header Preamble
 
 Here is an example of NEP Header Preamble, **all fields listed in this example are required**.
 
-```
+```yaml
 ---
 NEP: X
 Title: "This is the NEP Title"
@@ -61,29 +78,42 @@ Status: Draft
 Categories: Economic Model
 Created: YYYY-MM-DD
 ---
+
 ```
 
 ### 1. NEP
 
-- _\*required_
+```yaml
+NEP: X
+```
+
+- **required**
 
 - NEP number (this is determined by the NEP editor)
 
 ### 2. Title
 
-- _\*required_
+```yaml
+Title: "This is the NEP Title"
+```
+
+- **required**
 
 - NEP title quoted with `" "`
 
 ### 3. Authors
 
-- _\*required_
+```yaml
+Authors: "[First Last](mailto:name@domain.ext)"
+```
+
+- **required**
 
 - A list of the author’s or authors’ name(s) and/or username(s), or name(s) and email(s). Details are below.
 
-{{< details "Authors Examples" >}}
+{{< details "Authors Code Examples" >}}
 
-```
+```yaml
 # Author with Email
 Authors: "[First Last](mailto:name@domain.ext)"
 
@@ -98,7 +128,11 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 4. Discussions
 
-- _\*required_
+```yaml
+Discussions: https://url.to.discussions.ext
+```
+
+- **required**
 
 - While an NEP is a draft, a discussions-to header will indicate the mailing list or URL where the NEP is being discussed.
 
@@ -108,7 +142,11 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 5. Status
 
-- _\*required_
+```yaml
+Status: Draft
+```
+
+- **required**
 
 - WIP, Draft, Public Call, Final etc.
 
@@ -116,7 +154,11 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 6. Categories
 
-- _\*required_
+```yaml
+Categories: Economic Model
+```
+
+- **required**
 
 - NEP currently has 5 categories: `Economic Model`, `Personnel`, `Technical`, `Community Governance` and `Business`
 
@@ -124,21 +166,37 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 7. Created
 
-- _\*required_
+```yaml
+Created: YYYY-MM-DD
+```
+
+- **required**
 
 - Date for first created in `YYYY-MM-DD` format
 
 ### 8. Updated
 
+```yaml
+Updated: YYYY-MM-DD
+```
+
 - Comma separated list of dates.
 
-- e.g. `2020-10-23` or `2020-10-23, 2020-11-01, 2020-12-13`
+- e.g. `2020-12-23` or `2020-10-01, 2020-05-14, 2019-12-31`
 
 ### 9. Types
+
+```yaml
+Types: Standard Track
+```
 
 - NEP currently has 3 types: `Standard Track`, `NRC` and `Informational`
 
 ### 10. SupersededBy
+
+```yaml
+SupersededBy: 100
+```
 
 - The NEP Number of NEP that superseded this NEP.
 
@@ -146,13 +204,21 @@ Authors: "[Author 1](author1:name@domain.ext), [Author 2](https://author2.ext), 
 
 ### 11. Superseding
 
+```yaml
+Superseding: 50
+```
+
 - The NEP Number of NEP that _is_ or _is to be_ superseded by this NEP
 
-### Ordering
+- Only NEPs moved to `Active`, `Final` and later status can be added to this field.
+
+- This field should be added since this NEP is meant to supersede another NEP, even when this NEP is still in `WIP` status.
+
+### Last, Ordering
 
 The order of NEP Header Preamble Item is not enforced, but it is recommended to use the order as the example below:
 
-```
+```yaml {linenos=true,linenostart=0}
 ---
 NEP:
 Title:
@@ -166,14 +232,13 @@ Types:
 Created:
 Updated:
 ---
+
 ```
 
-## III. NEP Content Format
+## IV. NEP Content Format
 
 NEP Content should be written in **Markdown** format. Markdown formatting is widely used in websites and documents, also there were dozens of implementations in many languages and software applications.
 
 **CommonMark Spec** is a standard for Markdown and adopted by many applications. To see the latest **CommonMark Spec** please visit [https://spec.commonmark.org](https://spec.commonmark.org).
 
-## VI. NEP Templates
-
-NEP Template for Token (NRC)
+We'll provide more format examples in this document later.

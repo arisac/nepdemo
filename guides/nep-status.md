@@ -30,6 +30,8 @@ Statuses listed below is the Standard NEP Status for Newton Evolution Proposals.
 
 ## II. Status Definations
 
+Each status change is requested by the NEP author and reviewed by the NEP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your NEP. The NEP editors will process these requests as per the conditions below.
+
 ### 1. WIP(Work In Progress)
 
 **WIP**: Work In Progress is the status before a NEP is submitted to Newton for review. The champion can use other status name such as an _IDEA_ to share the NEP for discussion outside Newton's Github repository.

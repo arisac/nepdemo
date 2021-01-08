@@ -3,7 +3,7 @@ NEP: 21
 Title: "Newton Physical Asset (NPA)"
 Authors: "[Ben Koo](mailto:koo0905@gmail.com)"
 Discussions: https://github.com/newtonproject/NEPs/issues/21
-Status: Draft
+Status: Final
 Categories: Technical
 Types: Standard
 Created: 2020-05-09

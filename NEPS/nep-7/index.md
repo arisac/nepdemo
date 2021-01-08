@@ -3,7 +3,7 @@ NEP: 7
 Title: "Non-Fungible Token Standard (NRC-7)"
 Authors: "[Yong Liu](mailto:liuyong5653@163.com)"
 Discussions: https://github.com/newtonproject/NEPs/issues/7
-Status: Draft
+Status: Active
 Categories: Technical
 Types: NRC
 Created: 2020-04-29

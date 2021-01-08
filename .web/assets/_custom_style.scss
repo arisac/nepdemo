@@ -40,7 +40,7 @@
   border: solid 1px var(--secondary);
   @extend .rounded-xxs;
 
-  &.draft {
+  &.draft, &.deferred {
     $color: $color-orange;
     border-color: #{$color};
     color: #{$color};
@@ -50,12 +50,12 @@
     border-color: #{$color};
     color: #{$color};
   }
-  &.wip, &.replaced, &.superseded {
+  &.wip, &.superseded {
     $color: $color-info;
     border-color: #{$color};
     color: #{$color};
   }
-  &.implemented, &.active, &.deferred, &.final {
+  &.implemented, &.active,  &.final {
     $color: $color-green;
     border-color: #{$color};
     color: #{$color};

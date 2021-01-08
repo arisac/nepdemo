@@ -4,8 +4,8 @@
   "description": "NewBridge Network Project Website",
   "scripts": {
     "dev": "cd .web && npx hugo server",
-    "fc": "npx prettier --check ./NEPS ./docs ./reviews",
-    "ff": "npx prettier --write ./NEPS ./docs ./reviews"
+    "fc": "npx prettier --check ./NEPS ./guides ./reviews",
+    "ff": "npx prettier --write ./NEPS ./guides ./reviews"
   },
   "repository": {
     "type": "git",
