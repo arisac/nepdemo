@@ -22,33 +22,41 @@ Newton Evolution Proposals (NEPs) repository exists as a place to share concrete
 
 ### Prerequisites
 
-Open Terminal.
+1. Open Terminal.
 
-Check whether you have NodeJS and Yarn installed:
+2. Check whether you have NodeJS and Yarn installed:
 
 ```bash
 node --version && yarn --version
 ```
 
-Clone repository and update git submodules
+If you don't have NodeJS or Yarn installed, install them from [NodeJS Download](https://nodejs.org/en/download/) and [Yarn Installation](https://yarnpkg.com/getting-started/install).
+
+3. Clone repository and update git submodules
 
 ```bash
-git clone --recursive git@github.com:newtonproject/newbridge.network.git
+git clone --recursive git@github.com:newtonproject/NEPs.git
 ```
 
-Install Dependencies:
+Then go into your cloned git directory
+
+```bash
+cd NEPs
+```
+
+4. Install Dependencies:
 
 ```bash
 yarn
 ```
 
-Start Website in Dev Mode:
+### Start Website in Dev Mode
 
 ```bash
 yarn dev
 ```
 
-Build site files:
+### Build Website Files
 
 ```bash
 yarn build
