@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Status on Newton Evolution Proposals (NEPs)</title>
+    <link>https://nepdemo.newton.bio/Status/</link>
+    <description>Recent content in Status on Newton Evolution Proposals (NEPs)</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://nepdemo.newton.bio/Status/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active</title>
+      <link>https://nepdemo.newton.bio/Status/Active/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Active/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deferred</title>
+      <link>https://nepdemo.newton.bio/Status/Deferred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Deferred/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Draft</title>
+      <link>https://nepdemo.newton.bio/Status/Draft/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Draft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Final</title>
+      <link>https://nepdemo.newton.bio/Status/Final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Final/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implemented</title>
+      <link>https://nepdemo.newton.bio/Status/Implemented/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Implemented/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Public Call</title>
+      <link>https://nepdemo.newton.bio/Status/Public-Call/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Public-Call/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rejected</title>
+      <link>https://nepdemo.newton.bio/Status/Rejected/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Rejected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Superseded</title>
+      <link>https://nepdemo.newton.bio/Status/Superseded/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/Superseded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WIP</title>
+      <link>https://nepdemo.newton.bio/Status/WIP/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nepdemo.newton.bio/Status/WIP/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
