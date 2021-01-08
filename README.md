@@ -2,25 +2,60 @@
 
 [![Join the chat at https://gitter.im/newtonproject/NEPs](https://badges.gitter.im/newtonproject/NEPs.svg)](https://gitter.im/newtonproject/NEPs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Author: NTTF (Newton Tokenizing Task Force)
-
 Newton Evolution Proposals (NEPs) describe Proposals for the Newton Project including *Economic Model*, *Personnel*, *Technical*, *Community Governance* and *Business*.
 
 We welcome anyone with suggestions related to Newton Project to compile a NEP.  
 
-**Contents**
+This repository tracks the ongoing status of NEPs. It contains:
 
-- [Contributing a NEP](#contributing-a-nep)
-- [NEP Work Flow](#nep-work-flow)
-  - [Shepherding a NEP](#shepherding-a-nep)
-  - [NEP Process](#nep-process)
-- [NEP Formats and Templates](#nep-formats-and-templates)
-  - [Auxiliary Files](#auxiliary-files)
-  - [NEP Header Preamble](#nep-header-preamble)
-  - [NEP Templates](#nep-templates)
-- [Transferring NEP Ownership](#transferring-nep-ownership)
-- [NEP Editors](#nep-editors)
-  - [NEP Editors Responsibilities](#nep-editors-responsibilities)
+- `Draft` LINK-TO-BE-ADDED proposals which intend to complete the NEP review process.
+- `Public Call` LINK-TO-BE-ADDED for proposals that may become `Final` / `Active` (see also RSS feed).
+- The NEP process that governs the NEP repository.
+
+Browse all current and draft NEPs on the official NEPs site. LINK-TO-BE-ADDED
+
+Newton Evolution Proposals (NEPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
+
+## NEP Guidelines
+
+## Local Development
+
+### Prerequisites
+
+Open Terminal.
+
+Check whether you have NodeJS and Yarn installed:
+
+```bash
+node --version && yarn --version
+```
+
+Clone repository and update git submodules
+
+```bash
+git clone --recursive git@github.com:newtonproject/newbridge.network.git
+```
+
+Install Dependencies:
+
+```bash
+yarn
+```
+
+Start Website in Dev Mode:
+
+```bash
+yarn dev
+```
+
+Build site files:
+
+```bash
+yarn build
+```
+
+
+
 
 ## Contributing a NEP
 
