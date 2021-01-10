@@ -21,3 +21,6 @@ $RECYCLE.BIN/
 
 # OSX
 .DS_Store
+
+# Others
+/.web/layouts/partials/nep-git-info.html

@@ -1,6 +1,6 @@
 .nep-list-item {
   padding: $as-md $as-sm;
-  @extend .rounded-xs;
+  @extend .rounded-sm;
   &:hover {
     background: var(--fbg-200);
   }
@@ -17,7 +17,9 @@
   }
   .authors {
     font-size: smaller;
-    &, & a, & a:hover {
+    &,
+    & a,
+    & a:hover {
       color: var(--secondary);
     }
   }
@@ -40,27 +42,34 @@
   border: solid 1px var(--secondary);
   @extend .rounded-xxs;
 
-  &.draft, &.deferred {
+  &.draft,
+  &.deferred {
     $color: $color-orange;
     border-color: #{$color};
     color: #{$color};
   }
-  &.call, &.public-call {
+  &.call,
+  &.public-call {
     $color: $color-blue;
     border-color: #{$color};
     color: #{$color};
   }
-  &.wip, &.superseded {
+  &.wip,
+  &.superseded {
     $color: $color-info;
     border-color: #{$color};
     color: #{$color};
   }
-  &.implemented, &.active,  &.final {
+  &.implemented,
+  &.active,
+  &.final {
     $color: $color-green;
     border-color: #{$color};
     color: #{$color};
   }
-  &.abandoned, &.rejected, &.withdrawn {
+  &.abandoned,
+  &.rejected,
+  &.withdrawn {
     $color: $color-red;
     border-color: #{$color};
     color: #{$color};
@@ -73,7 +82,6 @@
       }
     }
   }
-
 }
 
 .nep-table {
@@ -81,9 +89,10 @@
   border-collapse: collapse;
   th {
     text-align: right;
-    font-weight: normal;;
+    font-weight: 600;
   }
-  & th, & td {
+  & th,
+  & td {
     border: solid 1px var(--fbg-300) !important;
     border-radius: 0 !important;
     border-collapse: collapse;
@@ -107,15 +116,17 @@
     overflow: hidden;
     @media screen and (max-width: $mobile-breakpoint) {
       flex-direction: column;
-      padding: $as-md;
+      padding: $as-lg;
       width: unset;
     }
     @extend .rounded-xl;
     @extend .box-shadow;
 
+    background: black;
+
     // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	  // background-size: 400% 400%;
-	  // animation: home-card-gradient 15s ease infinite;
+    // background-size: 400% 400%;
+    // animation: home-card-gradient 15s ease infinite;
     .vanta-canvas {
       @extend .rounded-xl;
     }
@@ -179,27 +190,27 @@
 }
 
 @keyframes home-card-gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.nep-quick-list, .nep-public-call-list {
+.nep-quick-list,
+.nep-public-call-list {
   width: 80%;
   margin: $as-lg auto;
   padding: $as-md $as-lg;
-  @extend .rounded-lg;
+  @extend .rounded-xl;
   @extend .box-shadow;
   h3 {
   }
 }
-
 
 .nep-public-call-list {
   background: var(--fbg-100);
@@ -216,13 +227,10 @@
 }
 
 .nep-quick-list {
-  // background: linear-gradient(-45deg, #0099ff, #bf3ce7);
-  // background-size: 400% 400%;
-  // animation: home-card-gradient 15s ease infinite;
-
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: home-card-gradient 15s ease infinite;
+  padding: $as-lg;
 
   h3 {
     color: white;
@@ -236,16 +244,15 @@
   a {
     font-weight: 600;
     padding: $as-sm $as-sm;
-    margin: $as-xs;
+    margin: 0 $as-xs $as-xs 0;
     width: $as-lg;
     text-align: center;
-    background: white;
-    @extend .rounded-circle;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    @extend .rounded-md;
     @extend .box-shadow;
     @media screen and (max-width: $mobile-breakpoint) {
-      padding: $as-xxs $as-xxs;
-      margin: $as-xxs;
-      width: $as-lg;
+      margin: 0 $as-xxs $as-xxs 0;
     }
     &:hover {
       color: white;
@@ -256,8 +263,14 @@
 
 .home-card {
   width: 80%;
+  margin: $as-md auto;
+  padding: $as-md $as-lg;
+  @extend .rounded-md;
+  @extend .box-shadow;
+}
+
+.home-card-container {
+  width: 80%;
   margin: $as-lg auto;
   padding: $as-md $as-lg;
-  @extend .rounded-lg;
-  @extend .box-shadow;
 }

@@ -32,7 +32,7 @@ Follow the procedure in Contributing a NEP or NEP Submission Guides for Beginner
 
 Once the NEP is ready to become a `Draft`, create a PR to the NEPs repository.
 
-#### NEP Process
+{{< details title="View NEP Process">}}
 
 ```bash --simplified
 # Submit a NEP Draft for the first time
@@ -60,6 +60,8 @@ $Authors:
       PR = "Closed" && exit NEP Process
 ```
 
+{{< /details >}}
+
 ### II. Update a NEP Draft
 
 - Only NEP in `Draft` status can accept updates
@@ -70,7 +72,7 @@ To update a Draft NEP, you must be one of the Authors mentioned in the NEP. If y
 
 If you tried contact the Authors and get no response, you may ask the NEP Editors for assistance. If the NEP Editors can't reach the NEP Authors, the editor may consider they have abandoned the NEP and change the status to abandoned. You may work on that and submit new updates to that NEP.
 
-#### NEP Process
+{{< details title="View NEP Process">}}
 
 ```bash --simplified
 # Update a NEP Draft
@@ -97,6 +99,8 @@ $Authors:
       PR = "Closed" && exit NEP Process
 ```
 
+{{< /details >}}
+
 ### III. Make a NEP Draft to NEP Final / Active
 
 - A NEP `Draft` must be already in Newton NEPs repository before requesting for it to be finalised to `Final` / `Active`
@@ -113,7 +117,7 @@ If you are not amount the authors, your submission will be rejected. Contact the
 
 If you tried contact the Authors and get no response, you may ask the NEP Editors for assistance. If the NEP Editors can't reach the NEP Authors, the editor may consider they have abandoned the NEP and change the status to abandoned. You may work on that and submit new updates to that NEP.
 
-#### NEP Process
+{{< details title="View NEP Process">}}
 
 ```bash --simplified
 # Make a NEP Draft to NEP Final
@@ -139,13 +143,15 @@ $Authors:
     NEP_Status = "Draft" && exit NEP Process
 ```
 
+{{< /details >}}
+
 ### IV. Update an Active NEP
 
 - You have to be one of the Authors to update an `Active` NEP
 
 - An `Active` status NEP can accept updates for adding features, but other parts can not be changes
 
-#### NEP Process
+{{< details title="View NEP Process">}}
 
 ```bash --simplified
 # Update an Active NEP
@@ -172,6 +178,8 @@ $Authors:
       PR = "Closed" && exit NEP Process
 ```
 
+{{< /details >}}
+
 ## Special NEP Flow
 
 ```bash
@@ -186,8 +194,16 @@ Special NEP Status Flow
 
 ### Flow of Abandoned NEP
 
+See [Transferring NEP Ownership](transfer-nep-ownership.md).
+
 ### NEP Final become Implemented or Deferred
 
-### NEP got Superseded
+`tbd`
+
+### NEP Got Superseded
+
+`tbd`
 
 ### Rejected NEP
+
+`tbd`

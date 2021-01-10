@@ -1,4 +1,4 @@
-baseURL: https://neps.newton.bio/
+baseURL: https://nepdemo.newton.bio/
 title: Newton Evolution Proposals (NEPs)
 # theme: newdocs
 theme: newdocs-hugo 
@@ -6,7 +6,7 @@ theme: newdocs-hugo
 ##########
 # NewDocs configuration
 # ------
-disablePathToLower: true
+disablePathToLower: fales
 enableGitInfo: true
 
 ##########
@@ -23,7 +23,7 @@ markup:
     codeFences: true
     guessSyntax: false
     hl_Lines: ""
-    lineAnchors: ""
+    lineAnchors: "code-line-no"
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
@@ -32,8 +32,6 @@ markup:
     tabWidth: 2
     # Styles To Choose From:
     # api, dracula, monokai, paraiso-dark, native, solarized-dark, solarized-dark-256, vim
-
-
 
 ##########
 # Multi-lingual mode config
@@ -49,24 +47,14 @@ languages:
     weight: 1
     languagedirection: ltr
 
-menu:
-  # before: []
-  # after:
-  #   - name: "Github"
-  #     url: "https://github.com/"
-  #     weight: 10
-  #   - name: "Newton Project"
-  #     url: "https://newtonproject.org"
-  #     weight: 20
-
 ignoreFiles:
   - contents*/menu
   - contents*/NEPS/nep-template*
 
 taxonomies:
-  Category: Categories
-  Status: Status
-  Types: Types
+  status: status
+  category: categories
+  types: types
 
 ##########
 # Google Analytics
@@ -121,6 +109,7 @@ params:
       url: 'https://t.me/newtonproject'
       icon: telegram-plane
       icon_pack: fab
+    
 
   # Git repository location
   # Set source repository location.

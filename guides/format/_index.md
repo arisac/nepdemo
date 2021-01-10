@@ -78,7 +78,7 @@ Status: Draft
 Categories: Economic Model
 Created: YYYY-MM-DD
 ---
-
+# NEP Content Starts
 ```
 
 ### 1. NEP
@@ -232,7 +232,7 @@ Types:
 Created:
 Updated:
 ---
-
+# NEP Content Starts
 ```
 
 ## IV. NEP Content Format

@@ -10,9 +10,9 @@
     <div class="cardlayout stats">
       <p class="heading"><a href="/NEPS">Total NEPs: {{ add (len (where .Site.Pages "Section" "NEPS")) -1 }}</a></p>
       <div>
-        {{ range $name, $taxonomy := .Site.Taxonomies.Status }}
+        {{ range $name, $taxonomy := .Site.Taxonomies.status }}
         <div>
-          <span class="nep-status {{ lower $name }} home"><a href="/Status/{{ $name | urlize }}"><span class="count">{{ $taxonomy.Count }}</span> {{ $name | humanize }}</a></span>
+          <span class="nep-status {{ lower $name }} home"><a href="/status/{{ $name | urlize }}"><span class="count">{{ $taxonomy.Count }}</span> {{ $name | humanize }}</a></span>
         </div>  
         {{end}}
       </div>
@@ -37,5 +37,5 @@ VANTA.FOG({
   blurFactor: 0.9,
   speed: 3.00,
   zoom: 0.5
-  })
+})
 </script>

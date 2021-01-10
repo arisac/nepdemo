@@ -124,23 +124,33 @@ Each status change is requested by the NEP author and reviewed by the NEP editor
 
 {{<mermaid class="text-center">}}
 graph TD
-WIP --> |PR| Draft
+
+AuthorEdit[Authors' Edit] --> |PR| Draft
+
 subgraph "NEP Review Process"
-Draft --> Abandoned
 Draft --> Rejected
 Draft --> PublicCall[Public Call]
+Draft --> Abandoned
+Abandoned --> Draft
 end
 
-      PublicCall --> Draft
-      PublicCall --> Final
-      PublicCall --> Active
+PublicCall --> PublicCall_Merged[Public Call]
 
-      subgraph "Status Change on Conditions"
-        Final -->  Deferred
-        Deferred --> Implemented
-        Final -->  Implemented
-        Implemented --> Superseded
-        Final -->  Superseded
-      end
+PublicCall_Merged --> Draft
+PublicCall_Merged --> Final
+PublicCall_Merged --> Active
+
+subgraph "Status Change on Conditions"
+Final --> Deferred
+Deferred --> Implemented
+Final --> Implemented
+Deferred --> Superseded
+Implemented --> Superseded
+Final --> Superseded
+end
+
+subgraph "NEP Review Process"
+Active --> |PR| Active
+end
 
 {{</mermaid >}}
