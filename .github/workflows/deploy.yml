@@ -12,7 +12,7 @@ jobs:
       - name: Wait on production-test
         uses: lewagon/wait-on-check-action@v0.1
         with:
-          ref: main # can be commit SHA or tag too
+          ref: web-wip # can be commit SHA or tag too
           check-name: production-test
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 30 # seconds
