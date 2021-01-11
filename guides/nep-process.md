@@ -5,7 +5,7 @@ description: How NEP is proccessed and status is changed during the process
 ---
 
 {{< hint info >}}
-This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+This doc was originally from https://github.com/newtonproject/NEPs/wiki and should be added to a NEP as reference.
 {{< /hint >}}
 
 ## Shepherding a NEP

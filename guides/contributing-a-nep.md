@@ -5,7 +5,7 @@ description: Guide for start a NEP and making updates
 ---
 
 {{< hint info >}}
-This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+This doc was originally from https://github.com/newtonproject/NEPs/wiki and should be added to a NEP as reference.
 {{< /hint >}}
 
 1. Review [NEP-0](../NEPS/nep-0/index.md) and guidelines in this document.

@@ -5,7 +5,7 @@ weight: 41
 ---
 
 {{< hint info >}}
-This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+This doc was originally from https://github.com/newtonproject/NEPs/wiki and should be added to a NEP as reference.
 {{< /hint >}}
 
 ## I. Available NEP Statuses

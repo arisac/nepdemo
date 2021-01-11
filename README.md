@@ -2,25 +2,25 @@
 
 [![Join the chat at https://gitter.im/newtonproject/NEPs](https://badges.gitter.im/newtonproject/NEPs.svg)](https://gitter.im/newtonproject/NEPs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Newton Evolution Proposals (NEPs) describe Proposals for the Newton Project including *Economic Model*, *Personnel*, *Technical*, *Community Governance* and *Business*.
+Newton Evolution Proposals (NEPs) describe Proposals for the Newton Project including _Economic Model_, _Personnel_, _Technical_, _Community Governance_ and _Business_.
 
-We welcome anyone with suggestions related to Newton Project to compile a NEP.  
+We welcome anyone with suggestions related to Newton Project to compile a NEP.
 
-This repository tracks the ongoing status of NEPs. It contains:
+This repository tracks the ongoing status of NEPs.
 
-- `Draft` LINK-TO-BE-ADDED proposals which intend to complete the NEP review process.
-- `Public Call` LINK-TO-BE-ADDED for proposals that may become `Final` / `Active` (see also RSS feed).
-- The NEP process that governs the NEP repository.
+- [NEPs Official Website](https://nepdemo.newton.bio/) are build from NEPs and Docs from this repository.
 
-Browse all current and draft NEPs on the official NEPs site. LINK-TO-BE-ADDED
+- [All NEPs](https://nepdemo.newton.bio/neps/) of all NEPs merged in to this repository.
+
+- [NEP Process](https://nepdemo.newton.bio/guides/nep-process/) that governs the NEPs repository.
+
+## Contributing to NEPs
 
 Newton Evolution Proposals (NEPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
 
-## NEP Guidelines
+Visit [NEP Guidelines](https://nepdemo.newton.bio/guides/) to learn how to contribute to NEPs.
 
-Docs for Guides are located in `./NEPs/guides/` directory.
-
-Visit website for live.
+Docs for Guides are located in `./guides` directory in this repository.
 
 ## Local Development
 
@@ -46,6 +46,12 @@ Then go into your cloned git directory
 
 ```bash
 cd NEPs
+```
+
+If not cloned with `--recursive`, update submodule to fetch the theme:
+
+```bash
+git submodule update --init --recursive
 ```
 
 4. Install Dependencies:

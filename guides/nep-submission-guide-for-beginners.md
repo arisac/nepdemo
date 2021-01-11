@@ -5,7 +5,7 @@ weight: 11
 ---
 
 {{< hint info >}}
-This doc was originally from https://github.com/newtonproject/NEPs/wiki, and should be added to a NEP as reference.
+This doc was originally from https://github.com/newtonproject/NEPs/wiki and should be added to a NEP as reference.
 {{< /hint >}}
 
 This guide is for those unfamiliar with the NEP Process and provides simple instructions for NEP submission, update, and request for final. This guide won't cover complex NEP status change and other requests described in NEPs Guideline.
