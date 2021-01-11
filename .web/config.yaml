@@ -1,7 +1,7 @@
 baseURL: https://nepdemo.newton.bio/
 title: Newton Evolution Proposals (NEPs)
 # theme: newdocs
-theme: newdocs-hugo 
+theme: newdocs
 
 ##########
 # NewDocs configuration
