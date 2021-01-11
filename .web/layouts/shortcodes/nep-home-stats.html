@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="cardlayout stats">
-      <p class="heading"><a href="/NEPS">Total NEPs: {{ add (len (where .Site.Pages "Section" "NEPS")) -1 }}</a></p>
+      <p class="heading"><a href="/neps">Total NEPs: {{ add (len (where .Site.Pages "Section" "NEPS")) -1 }}</a></p>
       <div>
         {{ range $name, $taxonomy := .Site.Taxonomies.status }}
         <div>
